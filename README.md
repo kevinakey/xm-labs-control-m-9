@@ -9,6 +9,7 @@ This document provides information about installing the xMatters (IT) for BMC Co
 Installing the integration service and updating the integration agent
 
 To configure the integration agent for the BMC Control-M integration, you must copy the integration components into the integration agent; this process is similar to patching the application, where instead of copying files and folders one by one, you copy the contents of a single folder directly into the integration agent folder (<IAHOME>). The folder structure is identical to the existing integration agent installation, so copying the folder's contents automatically installs the required files to their appropriate locations. Copying these files will not overwrite any existing integrations. This integration includes the following components:
+
 | Component                     | Description                                                                                                                       |
 |-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | bin/Controlm-APClient.bat     | Batch file targeted by SHOUT destinations from within Control-M. This batch file is responsible for injecting events to xMatters. |
@@ -16,6 +17,8 @@ To configure the integration agent for the BMC Control-M integration, you must c
 | conf/deduplicator-filter.xml  | The filtering mechanism used to suppress duplicate messages.                                                                      |
 | controlm-config.js            | The main configuration file for the integration; includes API connection information and user information.                        |
 | bmccontrolm.pwd               | Stores the password for the Control-M API user used by the integration service.                                                   |
+
+
 
 Once you have installed the files and folders, you will need to modify the controlm-config.js and IAConfig.xml files to suit your deployment configuration.
 
