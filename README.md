@@ -10,13 +10,34 @@ Installing the integration service and updating the integration agent
 
 To configure the integration agent for the BMC Control-M integration, you must copy the integration components into the integration agent; this process is similar to patching the application, where instead of copying files and folders one by one, you copy the contents of a single folder directly into the integration agent folder (<IAHOME>). The folder structure is identical to the existing integration agent installation, so copying the folder's contents automatically installs the required files to their appropriate locations. Copying these files will not overwrite any existing integrations. This integration includes the following components:
 
-| Component                 | Description                                                                                                |
-|---------------------------|------------------------------------------------------------------------------------------------------------|
-| Controlm-APClient.bat     | Batch responsible for injecting events to xMatters. Batch file called by Control-M SHOUT destination.      |
-| Controlm-APClient-Del.bat | Batch responsible for terminiating events in xMatters. Batch file called by Control-M SHOUT destination.   |
-| deduplicator-filter.xml   | The filtering mechanism used to suppress duplicate messages.                                               |
-| controlm-config.js        | The main configuration file for the integration; includes API connection information and user information. |
-| bmccontrolm.pwd           | Stores the password for the Control-M API user used by the integration service.                            |
+<table>
+  <tr>
+    <th>Component</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Controlm-APClient.bat</td>
+    <td>Batch responsible for injecting events to xMatters. Batch file called by Control-M SHOUT destination.</td>
+  </tr>
+  <tr>
+    <td>Controlm-APClient-Del.bat</td>
+    <td>Batch responsible for terminiating events in xMatters. Batch file called by Control-M SHOUT destination.</td>
+  </tr>
+  <tr>
+    <td>deduplicator-filter.xml</td>
+    <td>The filtering mechanism used to suppress duplicate messages.</td>
+  </tr>
+  <tr>
+    <td>controlm-config.js</td>
+    <td>The main configuration file for the integration; includes API connection information and user information.</td>
+  </tr>
+  <tr>
+    <td>bmccontrolm.pwd</td>
+    <td>Stores the password for the Control-M API user used by the integration service.</td>
+  </tr>
+</table>
+
+
 Once you have installed the files and folders, you will need to modify the controlm-config.js and IAConfig.xml files to suit your deployment configuration.
 
 Note: If you have more than one integration agent providing the BMC Control-M service, repeat the following steps for each one.
