@@ -10,10 +10,10 @@ Installing the integration service and updating the integration agent
 
 To configure the integration agent for the BMC Control-M integration, you must copy the integration components into the integration agent; this process is similar to patching the application, where instead of copying files and folders one by one, you copy the contents of a single folder directly into the integration agent folder (<IAHOME>). The folder structure is identical to the existing integration agent installation, so copying the folder's contents automatically installs the required files to their appropriate locations. Copying these files will not overwrite any existing integrations. This integration includes the following components:
 
-<table style="undefined;table-layout: fixed; width: 855px">
+<table style="undefined;table-layout: fixed; width: 969px">
 <colgroup>
-<col style="width: 198.75px">
-<col style="width: 655.75px">
+<col style="width: 225.75px">
+<col style="width: 742.75px">
 </colgroup>
   <tr>
     <th>Component</th>
