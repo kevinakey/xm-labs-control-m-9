@@ -189,7 +189,7 @@ _%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned._
 
 5. In the **Destination** field, select xMattersDel , and select an Urgency .
 
-6. In the **Message** field, type %%ORDERID
+6. In the **Message** field, type `%%ORDERID`
 
 7. Click **OK** to save the action.
 
