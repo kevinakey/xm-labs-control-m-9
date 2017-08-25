@@ -300,6 +300,21 @@ To trigger a notification, run a new job in BMC Control-M, and cause it to enter
   <img src="/media/Triggering%20Notification.png">
 </kbd>
 
+### 6.2 Responding to a notification
+This section describes how to respond to a notification from xMatters. In the following example, the notification is
+received in an email, but the process is similar for all Devices.
+
+**To respond to a notification:**
+1. When a notification arrives for the User, open it to view the details:
+2. The list of possible replies is located at the bottom of the notification. For email notifications, click one of the
+response option to send your response to BMC Control-M.
+Note that in the default integration configuration, you can also select response options to retrieve information about
+the job from BMC Control-M.
+3. To view the results of the response, view the job report details in BMC Control-M. In the following image, you can
+see that the notified user selected the "Rerun" response option, causing the job to be rerun:
+<kbd>
+  <img src="/media/Response.png">
+</kbd>
 
 ## 7 Troubleshooting
 * Consult the [Control-M EM API Documentation](/components/CTM_API_9.0.00.200_480104.pdf) if experiencing any issues related to the Control-M API Installation.
