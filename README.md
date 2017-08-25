@@ -32,4 +32,4 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 2. Open the IAConfig.xml file found in <IAHOME>\conf and add the following line to the “service-configs” section: <path>controlm20/controlm.xml</path>
 
 3. Open the controlm-config.js file (now located in <IAHOME>\integrationservices\controlm20\ folder, and set the values for the following variables:
-⋅⋅* test
+* test
