@@ -66,4 +66,17 @@ Ensure the following is installed:
 
 _**Note:** The **JAVA_HOME** environment refers to the directory where the JRE is installed. The JDK contains the JRE, but at a different level in the file hierarchy. For example, if the Java 2 SDK or JRE was installed in /ctm_em/user1, **JAVA_HOME** would be either:**/ctm_em/user1/jdk1.6.x/jre [JDK]** or **/ctm_em/user1/jre1.6.x [JRE]**._
 
+**To Install Control-M/EM API:** 
 
+Do one of the following to create the **emapi-900** directory:
+
+* **Microsoft Windows:** Unzip the emapi-900-nt.zip file from the cdPath\Setup_files\TOOLS\EMAPI_FILES directory on the Control-M/EM installation CD to any location.
+* **UNIX:**
+   * Solaris, AIX, HP-UX or HP-UX Itanium: Locate the emapi-900-UNIX.TAR.Z tar file in the cdPath/Setup_files/TOOLS/EMAPI_FILES directory on the Control-M/EM installation CD and type the following command to open and uncompress the file to any directory: uncompress -c cdPath/TOOLS/EMAPI_FILES/emapi-900-UNIX.TAR.Z | tar xvf 
+   * RedHat or Suse: Locate the emapi-900-UNIX.TAR.gz tar file in the cdPath/Setup_files/TOOLS/EMAPI_FILES directory on the Control-M/EM installation CD and type the following command to open and uncompress the file to any directory: 
+
+_-gunzip -c cdPath/TOOLS/EMAPI_FILES/emapi-900-UNIX.TAR.gz | tar xvf-_
+ 
+All Control-M/EM API files and sub-directories are located in this directory. See attached Control-M/EM API primary subdirectories (on page 12). 
+
+_**NOTE:** To uninstall Control-M/EM, delete the Control-M/EM API directory according to your version. For example, for version 9.0.00 delete the emapi-900 directory. Do not copy the Control-M/EM API version 9.0.00 files directly over the previous installation This may cause unpredictable behavior._
