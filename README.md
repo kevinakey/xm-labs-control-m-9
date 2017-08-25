@@ -132,7 +132,9 @@ The first step in configuring BMC Control-M is to specify the destinations for t
 
     _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat_
 
-https://xperts.xmatters.com/hc/article_attachments/115014119163/mceclip0.png
+<kbd>
+  <img src="https://github.com/matthewhenry1/xm-labs-mhenry/blob/master/Shout%20Destination%20Definition.png?raw=true"
+</kbd>
 
 
 4. Add another Shout Destination with the following properties:
@@ -168,7 +170,10 @@ Note that you must use semi-colons (;) to separate the components in the message
 
 _%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned._
 
-https://xperts.xmatters.com/hc/article_attachments/115013959986/mceclip1.png
+<kbd>
+  <img src="https://github.com/matthewhenry1/xm-labs-mhenry/blob/master/Shout%20Destination.png?raw=true"
+</kbd>
+
 
 7. Click OK  to save the action.
 
