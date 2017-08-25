@@ -27,11 +27,11 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 
 **To install the integration service:**
 
-1. Copy all of the contents of the \components\integration-agent\ folder from the extracted integration archive to the <IAHOME> folder.
+1. Copy all of the contents of the /components/integration-agent/ folder from the extracted integration archive to the <IAHOME> folder.
 
-2. Open the IAConfig.xml file found in <IAHOME>\conf and add the following line to the “service-configs” section: <path>controlm20/controlm.xml</path>
+2. Open the IAConfig.xml file found in <IAHOME>/conf and add the following line to the “service-configs” section: <path>controlm20/controlm.xml</path>
 
-3. Open the controlm-config.js file (now located in <IAHOME>\integrationservices\controlm20\ folder, and set the values for the following variables:
+3. Open the controlm-config.js file (now located in <IAHOME>/integrationservices/controlm20/ folder, and set the values for the following variables:
    * **CONTROL_M_USER:** The user name to be used for the BMC Control-M API Server; default value is "username".
    * **CONTROL_M_HOST_NAME:** Hostname of the BMC Control-M API Server; default value is "localhost".
    * **CONTROLM_PASSWORD_FILE:** Location of the password file for the API user; default value is "conf/bmccontrolm.pwd".
@@ -42,7 +42,7 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 
 4. Save and close the file.
 
-5. Open the Controlm-APClient.bat and Controlm-APClient-Del.bat files (now located in `<IAHOME>\bin` ) in a text editor, and change the value for the "IAHOME" variable to the location of the `<IAHOME>\bin` folder on your machine. (The default is `C:\PROGRA~1\xmatters\integrationagent\bin` ).
+5. Open the Controlm-APClient.bat and Controlm-APClient-Del.bat files (now located in `<IAHOME>/bin` ) in a text editor, and change the value for the "IAHOME" variable to the location of the `<IAHOME>/bin` folder on your machine. (The default is `C:/PROGRA~1/xmatters/integrationagent/bin` ).
 
 6. Save and close the files.
 
@@ -70,7 +70,7 @@ _**Note:** The `JAVA_HOME` environment refers to the directory where the JRE is 
 
 Do one of the following to create the **emapi-900** directory:
 
-* **Microsoft Windows:** Unzip the `emapi-900-nt.zip` file from the cd `Path\Setup_files\TOOLS\EMAPI_FILES` directory on the Control-M/EM installation CD to any location.
+* **Microsoft Windows:** Unzip the `emapi-900-nt.zip` file from the cd `Path/Setup_files/TOOLS/EMAPI_FILES` directory on the Control-M/EM installation CD to any location.
 * **UNIX:**
    * Solaris, AIX, HP-UX or HP-UX Itanium: Locate the `emapi-900-UNIX.TAR.Z` tar file in the `cdPath/Setup_files/TOOLS/EMAPI_FILES` directory on the Control-M/EM installation CD and type the following command to open and uncompress the file to any directory: uncompress `-c cdPath/TOOLS/EMAPI_FILES/emapi-900-UNIX.TAR.Z | tar xvf` 
    * RedHat or Suse: Locate the `emapi-900-UNIX.TAR.gz` tar file in the `cdPath/Setup_files/TOOLS/EMAPI_FILES` directory on the Control-M/EM installation CD and type the following command to open and uncompress the file to any directory: 
@@ -87,11 +87,11 @@ When you install the Control-M/EM API server, it creates two properties files wi
 
 To ensure that the integration can access these properties files, do one of the following:
 
-   * Copy both ctmemapi.properties and jacorb.properties from the Control-M/EM API server installation folder to the `<IAHOME>\integrationservices\controlm20` folder.
+   * Copy both ctmemapi.properties and jacorb.properties from the Control-M/EM API server installation folder to the `<IAHOME>/integrationservices/controlm20` folder.
    * The files are located in the following location: 
      * **ctmemapi.properties:** `<API Directory>/emapi-900/`
      * **jacorb.properties:** `<API Directory>/emapi-900/etc`
-   * Copy the **emapi.jar** and **jacorb.jar** from the Control-M API to the `integrationservices\lib` directory.
+   * Copy the **emapi.jar** and **jacorb.jar** from the Control-M API to the `integrationservices/lib` directory.
      * Both files can be found here: `<API Directory>/emapi-900/classes`
    * Update the `CTMEMAPI_PROPERTIES_FILE` and `JACORB_PROPERTIES_FILE` parameters in the `controlmconfig.js` file to point to the location of the files within the API server folder.
 
@@ -130,7 +130,7 @@ The first step in configuring BMC Control-M is to specify the destinations for t
    * **Destination:** Program
    * **Value:** Type the location of the integration agent's bin folder where the Controlm-APClient.bat file was installed; for example:
 
-    `C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat`
+    `C:/PROGRA~1/xmatters/integrationagent/bin/Controlm-APClient.bat`
 
 <kbd>
   <img src="media/Shout%20Destination%20Definition.png">
@@ -144,7 +144,7 @@ The first step in configuring BMC Control-M is to specify the destinations for t
    * **Destination:** Program
    * **Value:** Type the location of the integration agent's bin folder where the Controlm-APClient-Del.bat file was installed; for example:
 
-   `C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient-Del.bat`
+   `C:/PROGRA~1/xmatters/integrationagent/bin/Controlm-APClient-Del.bat`
    
    ### 4.2 Using shout destinations
 
