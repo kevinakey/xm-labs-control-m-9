@@ -198,6 +198,7 @@ Note that you must use semi-colons (;) to separate the components in the message
 Configuring xMatters to combine with BMC Control-M Workload Automation requires the following step:
 
    * Import of Communication plan
+   
 Once the communication plan has been imported, please ensure that the form sender information has been updated. Lastly, please ensure that the web service url's are mapping accordingly in the controlmconfig.js
 
 # 6. Configuration Validation
