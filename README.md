@@ -229,22 +229,59 @@ Configuring xMatters to combine with BMC Control-M Workload Automation requires 
    * Permissions
    
 ### 5.1 Import of Communication Plan
-
+1. Login to xMatters OnDemand
+2. Navigate to the Developer tab
+3. Import the Control-M [Communication Plan](/components/BMCControlMIntegration%20Comm%20Plan.zip)
 
 ### 5.2 Access Inbound Integration URL's
+To successfully configure the controlm-config.js navigate to xMatters OnDemeand to retrieve the inbound integration URL's.
+
+1. Login to xMatters OnDemand
+2. Navigate to the Developer tab
+3. Find the newly imported Control-M communication plan
+4. Select Edit > Integration Builder
+5. From within the Integration Builder, open Inbound Integrations
+6. From within the Inbound Integrations, individually select the link for each inbound integration, and map accordingly to the controlm-config.js file.
+7. The Inbound Integration URL's should be mapped to `XMATTERS_IB_INBOUND_INTEGRATIONS` in the controlm-config.js
 
 ### 5.3 REST API User
+To successfully integration and submit to xMatters OnDemand, it is necessary to configure a REST API User in xMatters.
+
+To create an integration user:
+
+1. Log in to the target xMatters system.
+2. On the Users tab, click Add.
+3. Enter the appropriate information for your new user. Because this user will affect how messages appear for recipients and how events will be displayed in the reports and Communication Center, you may want to identify the user as specific to Control-M; for example:
+  * First Name: Control-M
+  * Last Name: Integration
+  * User ID: controlm.rest
+  * Assign the user to the REST Web Service User, Group Supervisor, and Person Supervisor roles.
+  * Set the user ID and password.
+  * Make a note of these details; you will need them when configuring other parts of the integration.
+  * Click Save.
 
 ### 5.4 Permissions
    
 #### 5.4.1 Sender Permissions
-
+In the Edit drop-down list for the plan, select Forms.
+For the Incident Alerts form, click the Not Deployed drop-down list, and then select Create Event Web Service (in some deployments, Enable for Web Service).
+In the Web Service Only drop-down list, click Permissions.
+Add the REST API user you created above, and then click Save Changes.
+Repeat steps 6-8 for the Engage with xMatters and Conference Bridge forms.
 #### 5.4.2 Access Permissions
+1. Login to xMatters OnDemand
+2. Navigate to the Developer tab
+3. Find the newly imported Control-M communication plan.
+4. From the Edit dropdown select Access Permisssions
+5. Add the following role:
+   * Rest Web Services User
 
 #### 5.4.3 Edit Endpoints
-  
-  
+To configure the endpoints:
 
+1. On the communication plan, click the Integration Builder tab, and then click the Edit Endpoints button to display the endpoints for the integrations.
+2. Click the xMatters endpoint, update it with the credentials for the integration user you created in step 5.3 and then click Save Changes.
+  
 ## 6. Configuration Validation
 
 The following sections will test the combination of xMatters and BMC Control-M for notification delivery and response.
