@@ -49,3 +49,21 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 7. Restart the integration agent. 
 
 On Windows, the integration agent runs as a Windows Service; on Unix, it runs as a Unix daemon
+
+
+# 2. Installing Control M/EM API server properties files
+
+### 2.1 EM API Install
+This procedure describes how to install Control-M/EM API on Windows and UNIX. 
+
+Due to Java limitations, BMC Software recommends that you do not install Control-M/EM API in a directory with a path that contains spaces or other special characters. If you install Control-M/EM API on an account where an earlier version of Control-M/EM API is installed, see attached Control-M/EM API pdf (on page 19) before continuing. 
+
+**Before you begin**
+Ensure the following is installed: 
+
+   * Control-M/EM in your network environment 
+   * Java Developer's Kit (JDK) version 1.6.x or later or Java Runtime Environment (JRE) version 1.6.x or later on the computer hosting your project's working directory. JAVA_HOME environment variable should point to the JDK/JRE directory/library.
+
+_**Note:** The **JAVA_HOME** environment refers to the directory where the JRE is installed. The JDK contains the JRE, but at a different level in the file hierarchy. For example, if the Java 2 SDK or JRE was installed in /ctm_em/user1, **JAVA_HOME** would be either:**/ctm_em/user1/jdk1.6.x/jre [JDK]** or **/ctm_em/user1/jre1.6.x [JRE]**._
+
+
