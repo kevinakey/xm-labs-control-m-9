@@ -23,7 +23,7 @@ The filtering mechanism used to suppress duplicate messages. By default, the fil
 
 Once you have installed the files and folders, you will need to modify the controlm-config.js and IAConfig.xml files to suit your deployment configuration.
 
-**Note:** _If you have more than one integration agent providing the BMC Control-M service, repeat the following steps for each one._
+_**Note:** If you have more than one integration agent providing the BMC Control-M service, repeat the following steps for each one._
 
 **To install the integration service:**
 
