@@ -32,4 +32,10 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 2. Open the IAConfig.xml file found in <IAHOME>\conf and add the following line to the “service-configs” section: <path>controlm20/controlm.xml</path>
 
 3. Open the controlm-config.js file (now located in <IAHOME>\integrationservices\controlm20\ folder, and set the values for the following variables:
-  * test
+  * **CONTROL_M_USER:** The user name to be used for the BMC Control-M API Server; default value is "username".
+  * **CONTROL_M_HOST_NAME:** Hostname of the BMC Control-M API Server; default value is "localhost".
+  * **CONTROLM_PASSWORD_FILE:** Location of the password file for the API user; default value is "conf/bmccontrolm.pwd".
+  * **CTMEMAPI_PROPERTIES_FILE:** Location of the CTMEMAPI_PROPERTIES_FILE; default value is "integrationservices/controlm20/ctmemapi.properties". For more information about this setting, see the following section, "Installing Control M/EM API server properties files"
+  * **JACORB_PROPERTIES_FILE:** Location of the JACORB_PROPERTIES_FILE; default value is "integrationservices/controlm20/jacorb.properties". For more information about this setting, see the following section, "Installing Control M/EM API server properties files".
+  * **SLEEP_PERIOD_BETWEEN_CALLBACK:** The amount of time (in milliseconds) to sleep between receiving a SHOUT Message and making the callback to the BMC Control-M API for the job details. (Default is 3000, or three seconds.)
+  * **DEDUPLICATOR_FILTER:** Name of the deduplicator filter; i.e., the attribute name for the element filter in the deduplicator-filter.xml file. The default value is controlm20.
