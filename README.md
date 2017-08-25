@@ -147,15 +147,15 @@ Once you have defined the shout destinations, you can add them to a job in your 
    
 1. In the BMC Control-M Workload Automation Configuration Manager, open the job to which you want to add the shout destination.
 
-2. Open the Actions tab, and add an On-Do Action for the job.
+2. Open the **Actions** tab, and add an On-Do Action for the job.
 
-3. In the On drop-down list, select the action you want to use as the trigger for the notification.
+3. In the **On** drop-down list, select the action you want to use as the trigger for the notification.
 
-4. In the Do drop-down list, select Notify.
+4. In the **Do** drop-down list, select Notify.
 
-5. In the Destination field, select xMatters, and select an Urgency.
+5. In the **Destination** field, select xMatters, and select an Urgency.
 
-6. In the Message field, type %%ORDERID and then use the following syntax to specify the recipients and any custom message you want to add:
+6. In the **Message** field, type %%ORDERID and then use the following syntax to specify the recipients and any custom message you want to add:
 
 _%%ORDERID;<userID>,<userID2>;<message>_
 
@@ -164,3 +164,22 @@ Note that you must use semi-colons (;) to separate the components in the message
 _%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned._
 
 ![](https://xperts.xmatters.com/hc/article_attachments/115013959986/mceclip1.png?raw=true)
+
+7. Click OK  to save the action.
+
+**To use the xMattersDel shout destination for a job:**
+
+1. In the BMC Control-M Workload Automation Configuration Manager, open the job to which you want to add the shout destination.
+
+2. Open the **Actions** tab, and add an On-Do Action for the job.
+
+3. In the **On** drop-down list, select the action you want to use as the trigger.
+
+4. In the **Do** drop-down list, select Notify .
+
+5. In the **Destination** field, select xMattersDel , and select an Urgency .
+
+6. In the **Message** field, type %%ORDERID
+
+7. Click **OK** to save the action.
+
