@@ -42,7 +42,7 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 
 4. Save and close the file.
 
-5. Open the Controlm-APClient.bat and Controlm-APClient-Del.bat files (now located in <IAHOME>\bin ) in a text editor, and change the value for the "IAHOME" variable to the location of the <IAHOME>\bin folder on your machine. (The default is C:\PROGRA~1\xmatters\integrationagent\bin ).
+5. Open the Controlm-APClient.bat and Controlm-APClient-Del.bat files (now located in `<IAHOME>\bin` ) in a text editor, and change the value for the "IAHOME" variable to the location of the `<IAHOME>\bin` folder on your machine. (The default is `C:\PROGRA~1\xmatters\integrationagent\bin` ).
 
 6. Save and close the files.
 
@@ -62,20 +62,20 @@ Due to Java limitations, BMC Software recommends that you do not install Control
 Ensure the following is installed: 
 
    * Control-M/EM in your network environment 
-   * Java Developer's Kit (JDK) version 1.6.x or later or Java Runtime Environment (JRE) version 1.6.x or later on the computer hosting your project's working directory. JAVA_HOME environment variable should point to the JDK/JRE directory/library.
+   * Java Developer's Kit (JDK) version 1.6.x or later or Java Runtime Environment (JRE) version 1.6.x or later on the computer hosting your project's working directory. `JAVA_HOME` environment variable should point to the JDK/JRE directory/library.
 
-_**Note:** The **JAVA_HOME** environment refers to the directory where the JRE is installed. The JDK contains the JRE, but at a different level in the file hierarchy. For example, if the Java 2 SDK or JRE was installed in /ctm_em/user1, **JAVA_HOME** would be either:**/ctm_em/user1/jdk1.6.x/jre [JDK]** or **/ctm_em/user1/jre1.6.x [JRE]**._
+_**Note:** The `JAVA_HOME` environment refers to the directory where the JRE is installed. The JDK contains the JRE, but at a different level in the file hierarchy. For example, if the Java 2 SDK or JRE was installed in `/ctm_em/user1`, `JAVA_HOME` would be either:`/ctm_em/user1/jdk1.6.x/jre [JDK]` or `/ctm_em/user1/jre1.6.x [JRE]`.
 
 **To Install Control-M/EM API:** 
 
 Do one of the following to create the **emapi-900** directory:
 
-* **Microsoft Windows:** Unzip the emapi-900-nt.zip file from the cdPath\Setup_files\TOOLS\EMAPI_FILES directory on the Control-M/EM installation CD to any location.
+* **Microsoft Windows:** Unzip the `emapi-900-nt.zip` file from the cd `Path\Setup_files\TOOLS\EMAPI_FILES` directory on the Control-M/EM installation CD to any location.
 * **UNIX:**
-   * Solaris, AIX, HP-UX or HP-UX Itanium: Locate the emapi-900-UNIX.TAR.Z tar file in the cdPath/Setup_files/TOOLS/EMAPI_FILES directory on the Control-M/EM installation CD and type the following command to open and uncompress the file to any directory: uncompress -c cdPath/TOOLS/EMAPI_FILES/emapi-900-UNIX.TAR.Z | tar xvf 
-   * RedHat or Suse: Locate the emapi-900-UNIX.TAR.gz tar file in the cdPath/Setup_files/TOOLS/EMAPI_FILES directory on the Control-M/EM installation CD and type the following command to open and uncompress the file to any directory: 
+   * Solaris, AIX, HP-UX or HP-UX Itanium: Locate the `emapi-900-UNIX.TAR.Z` tar file in the `cdPath/Setup_files/TOOLS/EMAPI_FILES` directory on the Control-M/EM installation CD and type the following command to open and uncompress the file to any directory: uncompress `-c cdPath/TOOLS/EMAPI_FILES/emapi-900-UNIX.TAR.Z | tar xvf` 
+   * RedHat or Suse: Locate the `emapi-900-UNIX.TAR.gz` tar file in the `cdPath/Setup_files/TOOLS/EMAPI_FILES` directory on the Control-M/EM installation CD and type the following command to open and uncompress the file to any directory: 
 
-_-gunzip -c cdPath/TOOLS/EMAPI_FILES/emapi-900-UNIX.TAR.gz | tar xvf-_
+`-gunzip -c cdPath/TOOLS/EMAPI_FILES/emapi-900-UNIX.TAR.gz | tar xvf-`
  
 All Control-M/EM API files and sub-directories are located in this directory. See attached Control-M/EM API primary subdirectories (on page 12). 
 
@@ -89,11 +89,11 @@ To ensure that the integration can access these properties files, do one of the 
 
    * Copy both ctmemapi.properties and jacorb.properties from the Control-M/EM API server installation folder to the `<IAHOME>\integrationservices\controlm20` folder.
    * The files are located in the following location: 
-     * **ctmemapi.properties:** `API Directory\emapi-900\`
-     * **jacorb.properties:** `API Directory\emapi-900\etc`
+     * **ctmemapi.properties:** `<API Directory>/emapi-900/`
+     * **jacorb.properties:** `<API Directory>/emapi-900/etc`
    * Copy the **emapi.jar** and **jacorb.jar** from the Control-M API to the `integrationservices\lib` directory.
-     * Both files can be found here: `API Directory\emapi-900\classes`
-   * Update the CTMEMAPI_PROPERTIES_FILE and JACORB_PROPERTIES_FILE parameters in the `controlmconfig.js` file to point to the location of the files within the API server folder.
+     * Both files can be found here: `<API Directory>/emapi-900/classes`
+   * Update the `CTMEMAPI_PROPERTIES_FILE` and `JACORB_PROPERTIES_FILE` parameters in the `controlmconfig.js` file to point to the location of the files within the API server folder.
 
 # 3. Updating the user password
 
