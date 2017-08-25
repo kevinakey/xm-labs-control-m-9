@@ -91,6 +91,7 @@ To ensure that the integration can access these properties files, do one of the 
    * The files are located in the following location: 
      * **ctmemapi.properties:** _API Directory_\emapi-900\
      * **jacorb.properties:** _API Directory_\emapi-900\etc 
+   * Copy the **emapi.jar** and **jacorb.jar** from the Control-M API to the integrationservices\lib directory.
    * Update the CTMEMAPI_PROPERTIES_FILE and JACORB_PROPERTIES_FILE parameters in the controlmconfig.js file to point to the location of the files within the API server folder.
 
 # 3. Updating the user password
