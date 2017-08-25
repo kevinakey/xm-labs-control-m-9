@@ -163,4 +163,4 @@ Note that you must use semi-colons (;) to separate the components in the message
 
 _%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned._
 
-https://xperts.xmatters.com/hc/article_attachments/115013959986/mceclip1.png
+![](https://xperts.xmatters.com/hc/article_attachments/115013959986/mceclip1.png?raw=true)
