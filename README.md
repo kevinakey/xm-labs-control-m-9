@@ -126,5 +126,5 @@ The first step in configuring BMC Control-M is to specify the destinations for t
    * **Value:** Type the location of the integration agent's bin folder where the Controlm-APClient.bat file was installed; for example:
 
     _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat_
-  
-  
+
+(https://xperts.xmatters.com/hc/article_attachments/115014119163/mceclip0.png)
