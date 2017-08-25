@@ -209,4 +209,4 @@ After configuring xMatters and BMC Control-M, you can validate that communicatio
 
 To trigger a notification, run a new job in BMC Control-M, and cause it to enter a state for which you have defined an xMatters Shout Message:
 
-https://xperts.xmatters.com/hc/article_attachments/115013967006/mceclip0.png
+[logo]: https://github.com/matthewhenry1/xm-labs-mhenry/blob/master/Triggering%20Notification.png?raw=true "Triggering Notification"
