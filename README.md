@@ -22,7 +22,7 @@ Integrating xMatters with your other tools allows you to automatically transfer 
 * [Communication Plan](/components/BMCControlMIntegration%20Comm%20Plan.zip)
 * [Integration Service](/components/control-m_v9%20Integration%20Service.zip)
 * [Control-M EM API Documentation](/components/CTM_API_9.0.00.200_480104.pdf)
-* [Integration Agent] (https://support.xmatters.com/hc/en-us/articles/201463419-Integration-Agent-for-xMatters-5-x-xMatters-On-Demand)
+* [Integration Agent](https://support.xmatters.com/hc/en-us/articles/201463419-Integration-Agent-for-xMatters-5-x-xMatters-On-Demand)
 
 # How it works
 
