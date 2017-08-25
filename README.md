@@ -12,7 +12,6 @@ Integrating xMatters with your other tools allows you to automatically transfer 
   * Initiate a targeted chat room via Slack, HipChat or Hubot
   * Record chat room activity back into a service management ticket
 
-
 # Pre-Requisites
 * BMC Control-M Workload Automation v9
 * BMC CONTROL-M/EM API v9
@@ -25,6 +24,8 @@ Integrating xMatters with your other tools allows you to automatically transfer 
 * [Control-M EM API Documentation](/components/CTM_API_9.0.00.200_480104.pdf)
 
 # How it works
+
+The Control-M integration leverages shout destinations which submit events to xMatters Integration Agent via the Apclient.bin submission mechanism. Once the Integration Agent receives the events, the event information is POST'd to xMatters via a REST API.
 
 # Installation
 ## 1. Installation and Configuration
@@ -74,7 +75,6 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 7. Restart the integration agent. 
 
 On Windows, the integration agent runs as a Windows Service; on Unix, it runs as a Unix daemon
-
 
 ## 2. Installing Control M/EM API server properties files
 
@@ -261,3 +261,9 @@ To trigger a notification, run a new job in BMC Control-M, and cause it to enter
 <kbd>
   <img src="/media/Triggering%20Notification.png">
 </kbd>
+
+
+## 7 Troubleshooting
+* Consult the Control-M EM API Documentation if experiencing any issues related to the Control-M API Installation.
+* Consult the Integration Agent documentation if experiencing any issues related to configuring the Integration Agent
+* Consult [xMatters Help](https://help.xmatters.com/) if experiencing any issues within xMatters OnDemand.
