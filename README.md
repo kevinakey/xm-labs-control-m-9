@@ -128,3 +128,39 @@ The first step in configuring BMC Control-M is to specify the destinations for t
     _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat_
 
 [logo]: (https://xperts.xmatters.com/hc/article_attachments/115014119163/mceclip0.png "Control-M")
+
+
+4. Add another Shout Destination with the following properties:
+
+   * **Logical Name:** xMattersDel
+   * **Address:** Server
+   * **Destination:** Program
+   * **Value:** Type the location of the integration agent's bin folder where the Controlm-APClient-Del.bat file was installed; for example:
+
+   _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient-Del.bat_
+   
+   ### 4.2 Using shout destinations
+
+Once you have defined the shout destinations, you can add them to a job in your system. The xMatters shout (Controlm-APClient.bat) sends notifications into xMatters, and allows users to take actions depending on the current state of the job when the notification is sent. The xMattersDel shout (Controlm-APClient-Del.bat) is used to clean up outstanding notifications; you can use this when a job ends with an OK state to remove any outdated notifications from xMatters.
+
+**To use the xMatters shout destination for a job:** 
+   
+1. In the BMC Control-M Workload Automation Configuration Manager, open the job to which you want to add the shout destination.
+
+2. Open the Actions tab, and add an On-Do Action for the job.
+
+3. In the On drop-down list, select the action you want to use as the trigger for the notification.
+
+4. In the Do drop-down list, select Notify.
+
+5. In the Destination field, select xMatters, and select an Urgency.
+
+6. In the Message field, type %%ORDERID and then use the following syntax to specify the recipients and any custom message you want to add:
+
+_%%ORDERID;<userID>,<userID2>;<message>_
+
+Note that you must use semi-colons (;) to separate the components in the message field, and commas (,) to separate the xMatters User IDs that identify the recipients. For example:
+
+_%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned._
+
+https://xperts.xmatters.com/hc/article_attachments/115013959986/mceclip1.png
