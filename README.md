@@ -1,8 +1,33 @@
-# Overview
+# Control-M
 
-The information detailed in this document are to be used for Control-M v 9. 
+## Integration Overview
 
-# 1. Installation and Configuration
+BMC Control-M delivers is business automation solution that simplifies and automates diverse batch application workloads. When events meet predetermined criteria, this integration with xMatters relays critical BMC Control-M insight data to the correct people and systems to help coordinate and resolve incidents faster. xMatters leverages your group on-call schedules and rotations, escalation rules, and user device preferences to quickly engage the right resources with customizable response and collaboration options.
+
+## Automate Handoffs accross your toolcahin
+
+Integrating xMatters with your other tools allows you to automatically transfer key BMC Control-M alert data throughout your systems and drive workflows forward. Notifications and collaboration invites embedded with BMC Control-M insights allow your resolution teams to take immediate action.
+  * Create a service management ticket with the BMC Control-M insights
+  * Invite people across multiple teams to a conference call with context from BMC Control-M
+  * Initiate a targeted chat room via Slack, HipChat or Hubot
+  * Record chat room activity back into a service management ticket
+
+
+# Pre-Requisites
+* BMC Control-M Workload Automation v9
+* BMC CONTROL-M/EM API v9
+* xMatters OnDemand
+* xMatters integration agent 5.x (5.0 patch 007 or later)
+
+# Files
+* [Communication Plan] (/components/BMCControlMIntegration Comm Plan.zip)
+* [Integration Service] (/components/control-m_v9 Integration Service.zip)
+* [Control-M EM API Documentation] (/components/CTM_API_9.0.00.200_480104.pdf)
+
+# How it works
+
+# Installation
+## 1. Installation and Configuration
 
 This document provides information about installing the xMatters (IT) for BMC Control-M Workload Automation integration. This document also contains complete instructions on how to configure xMatters, BMC Control-M, and the integration components.
 
@@ -51,7 +76,7 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 On Windows, the integration agent runs as a Windows Service; on Unix, it runs as a Unix daemon
 
 
-# 2. Installing Control M/EM API server properties files
+## 2. Installing Control M/EM API server properties files
 
 ### 2.1 EM API Install
 This procedure describes how to install Control-M/EM API on Windows and UNIX. 
@@ -95,7 +120,7 @@ To ensure that the integration can access these properties files, do one of the 
      * Both files can be found here: `<API Directory>/emapi-900/classes`
    * Update the `CTMEMAPI_PROPERTIES_FILE` and `JACORB_PROPERTIES_FILE` parameters in the `controlmconfig.js` file to point to the location of the files within the API server folder.
 
-# 3. Updating the user password
+## 3. Updating the user password
 
 The password for the BMC Control-M user is stored in an encrypted password file, stored in the <IAHOME>/conf subfolder. For the integration to connect to the API, you will have to replace the default value ("password") with the password of the database user specified in the controlm-config.js file (as described in the table above.)
 
@@ -109,7 +134,7 @@ To change the encrypted password:
 
 _**Note:** that if you want to change this password again, you will have to replace "password" in the above command with the existing password._
 
-# 4. Configuring BMC Control-M Workload Automation
+## 4. Configuring BMC Control-M Workload Automation
 
 The following sections describe how to configure BMC Control-M to combine with xMatters.
 
@@ -193,15 +218,33 @@ Note that you must use semi-colons (;) to separate the components in the message
 
 7. Click **OK** to save the action.
 
-# 5. Configuring xMatters
+## 5. Configuring xMatters
 
 Configuring xMatters to combine with BMC Control-M Workload Automation requires the following step:
 
    * Import of Communication plan
+   * Access Inbound Integration URL's
+   * REST API User
+   * Permissions
    
-Once the communication plan has been imported, please ensure that the form sender information has been updated. Lastly, please ensure that the web service url's are mapping accordingly in the controlmconfig.js
+### 5.1 Import of Communication Plan
 
-# 6. Configuration Validation
+
+### 5.2 Access Inbound Integration URL's
+
+### 5.3 REST API User
+
+### 5.4 Permissions
+   
+#### 5.4.1 Sender Permissions
+
+#### 5.4.2 Access Permissions
+
+#### 5.4.3 Edit Endpoints
+  
+  
+
+## 6. Configuration Validation
 
 The following sections will test the combination of xMatters and BMC Control-M for notification delivery and response.
 
