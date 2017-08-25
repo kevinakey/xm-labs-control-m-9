@@ -127,4 +127,4 @@ The first step in configuring BMC Control-M is to specify the destinations for t
 
     _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat_
 
-(https://xperts.xmatters.com/hc/article_attachments/115014119163/mceclip0.png)
+[logo]: (https://xperts.xmatters.com/hc/article_attachments/115014119163/mceclip0.png)
