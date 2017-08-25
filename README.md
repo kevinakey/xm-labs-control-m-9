@@ -127,7 +127,7 @@ The first step in configuring BMC Control-M is to specify the destinations for t
 
     _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat_
 
-[logo]: (https://xperts.xmatters.com/hc/article_attachments/115014119163/mceclip0.png "Control-M")
+https://xperts.xmatters.com/hc/article_attachments/115014119163/mceclip0.png
 
 
 4. Add another Shout Destination with the following properties:
@@ -163,7 +163,7 @@ Note that you must use semi-colons (;) to separate the components in the message
 
 _%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned._
 
-![](https://xperts.xmatters.com/hc/article_attachments/115013959986/mceclip1.png?raw=true)
+https://xperts.xmatters.com/hc/article_attachments/115013959986/mceclip1.png
 
 7. Click OK  to save the action.
 
@@ -183,3 +183,25 @@ _%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned._
 
 7. Click **OK** to save the action.
 
+# 5. Configuring xMatters
+
+Configuring xMatters to combine with BMC Control-M Workload Automation requires the following step:
+
+   * Import of Communication plan
+Once the communication plan has been imported, please ensure that the form sender information has been updated. Lastly, please ensure that the web service url's are mapping accordingly in the controlmconfig.js
+
+# 6. Configuration Validation
+
+The following sections will test the combination of xMatters and BMC Control-M for notification delivery and response.
+
+After configuring xMatters and BMC Control-M, you can validate that communication is properly configured. It is recommended that you start the components in the following order:
+
+   * BMC Control-M
+   * xMatters integration agent
+   * xMatters
+
+### 6.1 Triggering a notification
+
+To trigger a notification, run a new job in BMC Control-M, and cause it to enter a state for which you have defined an xMatters Shout Message:
+
+https://xperts.xmatters.com/hc/article_attachments/115013967006/mceclip0.png
