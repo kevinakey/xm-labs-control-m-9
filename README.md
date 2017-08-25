@@ -88,6 +88,9 @@ When you install the Control-M/EM API server, it creates two properties files wi
 To ensure that the integration can access these properties files, do one of the following:
 
    * Copy both ctmemapi.properties and jacorb.properties from the Control-M/EM API server installation folder to the <IAHOME>\integrationservices\controlm20 folder.
+   * The files are located in the following location: 
+     * <API Directory>\emapi-900\ -ctmemapi.properties
+     * <API Directory>\emapi-900\etc – jacorb.properties
    * Update the CTMEMAPI_PROPERTIES_FILE and JACORB_PROPERTIES_FILE parameters in the controlmconfig.js file to point to the location of the files within the API server folder.
 
 # 3. Updating the user password
