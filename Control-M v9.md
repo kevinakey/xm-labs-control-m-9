@@ -87,13 +87,13 @@ When you install the Control-M/EM API server, it creates two properties files wi
 
 To ensure that the integration can access these properties files, do one of the following:
 
-   * Copy both ctmemapi.properties and jacorb.properties from the Control-M/EM API server installation folder to the <IAHOME>\integrationservices\controlm20 folder.
+   * Copy both ctmemapi.properties and jacorb.properties from the Control-M/EM API server installation folder to the `<IAHOME>\integrationservices\controlm20` folder.
    * The files are located in the following location: 
-     * **ctmemapi.properties:** _API Directory_\emapi-900\
-     * **jacorb.properties:** _API Directory_\emapi-900\etc 
-   * Copy the **emapi.jar** and **jacorb.jar** from the Control-M API to the integrationservices\lib directory.
-     * Both files can be found here: _API Directory_\emapi-900\classes
-   * Update the CTMEMAPI_PROPERTIES_FILE and JACORB_PROPERTIES_FILE parameters in the controlmconfig.js file to point to the location of the files within the API server folder.
+     * **ctmemapi.properties:** `API Directory\emapi-900\`
+     * **jacorb.properties:** `API Directory\emapi-900\etc`
+   * Copy the **emapi.jar** and **jacorb.jar** from the Control-M API to the `integrationservices\lib` directory.
+     * Both files can be found here: `API Directory\emapi-900\classes`
+   * Update the CTMEMAPI_PROPERTIES_FILE and JACORB_PROPERTIES_FILE parameters in the `controlmconfig.js` file to point to the location of the files within the API server folder.
 
 # 3. Updating the user password
 
@@ -105,7 +105,7 @@ To change the encrypted password:
 
 1. Navigate to the <IAHOME>/bin subfolder, and then run the following command, replacing <newPassword> with the password of the BMC Control-M user:
 
-_./iapassword.sh --new "<newPassword>" --old password --file conf/bmccontrolm.pwd_
+`./iapassword.sh --new "<newPassword>" --old password --file conf/bmccontrolm.pwd`
 
 _**Note:** that if you want to change this password again, you will have to replace "password" in the above command with the existing password._
 
@@ -130,7 +130,7 @@ The first step in configuring BMC Control-M is to specify the destinations for t
    * **Destination:** Program
    * **Value:** Type the location of the integration agent's bin folder where the Controlm-APClient.bat file was installed; for example:
 
-    _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat_
+    `C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat`
 
 <kbd>
   <img src="media/Shout%20Destination%20Definition.png">
@@ -144,7 +144,7 @@ The first step in configuring BMC Control-M is to specify the destinations for t
    * **Destination:** Program
    * **Value:** Type the location of the integration agent's bin folder where the Controlm-APClient-Del.bat file was installed; for example:
 
-   _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient-Del.bat_
+   `C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient-Del.bat`
    
    ### 4.2 Using shout destinations
 
@@ -162,9 +162,9 @@ Once you have defined the shout destinations, you can add them to a job in your 
 
 5. In the **Destination** field, select xMatters, and select an Urgency.
 
-6. In the **Message** field, type %%ORDERID and then use the following syntax to specify the recipients and any custom message you want to add:
+6. In the **Message** field, type `%%ORDERID` and then use the following syntax to specify the recipients and any custom message you want to add:
 
-_%%ORDERID;<userID>,<userID2>;<message>_
+`%%ORDERID;<userID>,<userID2>;<message>`
 
 Note that you must use semi-colons (;) to separate the components in the message field, and commas (,) to separate the xMatters User IDs that identify the recipients. For example:
 
