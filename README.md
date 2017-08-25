@@ -80,3 +80,51 @@ _-gunzip -c cdPath/TOOLS/EMAPI_FILES/emapi-900-UNIX.TAR.gz | tar xvf-_
 All Control-M/EM API files and sub-directories are located in this directory. See attached Control-M/EM API primary subdirectories (on page 12). 
 
 _**NOTE:** To uninstall Control-M/EM, delete the Control-M/EM API directory according to your version. For example, for version 9.0.00 delete the emapi-900 directory. Do not copy the Control-M/EM API version 9.0.00 files directly over the previous installation This may cause unpredictable behavior._
+
+### 2.2 Configure xMatters Integration Agent
+
+When you install the Control-M/EM API server, it creates two properties files within its installation folder: ctmemapi.properties and jacorb.properties . Both of these files are required by the integration to access and communicate with the API server.
+
+To ensure that the integration can access these properties files, do one of the following:
+
+   * Copy both ctmemapi.properties and jacorb.properties from the Control-M/EM API server installation folder to the <IAHOME>\integrationservices\controlm20 folder.
+   * Update the CTMEMAPI_PROPERTIES_FILE and JACORB_PROPERTIES_FILE parameters in the controlmconfig.js file to point to the location of the files within the API server folder.
+
+# 3. Updating the user password
+
+The password for the BMC Control-M user is stored in an encrypted password file, stored in the <IAHOME>/conf subfolder. For the integration to connect to the API, you will have to replace the default value ("password") with the password of the database user specified in the controlm-config.js file (as described in the table above.)
+
+_**Note:** For more information about the integration agent's IAPassword feature used to encrypt the password, see the xMatters integration agent guide._
+
+To change the encrypted password:
+
+1. Navigate to the <IAHOME>/bin subfolder, and then run the following command, replacing <newPassword> with the password of the BMC Control-M user:
+
+_./iapassword.sh --new "<newPassword>" --old password --file conf/bmccontrolm.pwd_
+
+_**Note:** that if you want to change this password again, you will have to replace "password" in the above command with the existing password._
+
+# 4. Configuring BMC Control-M Workload Automation
+
+The following sections describe how to configure BMC Control-M to combine with xMatters.
+
+### 4.1 Define shout destinations
+
+The first step in configuring BMC Control-M is to specify the destinations for the xMatters and xMattersDel shout destinations.
+
+**To define shout destinations:**
+
+1. In the BMC Control-M Workload Automation Configuration Manager, open the Shout Destinations Manager.
+
+2. Select  Actions > Add Shout table (or  Update Shout Table to modify an existing table).
+
+3. Add a Shout Destination with the following properties:
+
+   * **Logical Name:** xMatters
+   * **Address:** Server
+   * **Destination:** Program
+   * **Value:** Type the location of the integration agent's bin folder where the Controlm-APClient.bat file was installed; for example:
+
+    _C:\PROGRA~1\xmatters\integrationagent\bin\Controlm-APClient.bat_
+  
+  
