@@ -168,7 +168,7 @@ Once you have defined the shout destinations, you can add them to a job in your 
 
 Note that you must use semi-colons (;) to separate the components in the message field, and commas (,) to separate the xMatters User IDs that identify the recipients. For example:
 
-_%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned._
+`%%ORDERID;bsmith,cogrady,admin;The job was completed and assigned.`
 
 <kbd>
   <img src="media/Shout%20Destination.png">
