@@ -22,6 +22,7 @@ Integrating xMatters with your other tools allows you to automatically transfer 
 * [Communication Plan](/components/BMCControlMIntegration%20Comm%20Plan.zip)
 * [Integration Service](/components/control-m_v9%20Integration%20Service.zip)
 * [Control-M EM API Documentation](/components/CTM_API_9.0.00.200_480104.pdf)
+* [Integration Agent] (https://support.xmatters.com/hc/en-us/articles/201463419-Integration-Agent-for-xMatters-5-x-xMatters-On-Demand)
 
 # How it works
 
@@ -264,6 +265,6 @@ To trigger a notification, run a new job in BMC Control-M, and cause it to enter
 
 
 ## 7 Troubleshooting
-* Consult the Control-M EM API Documentation if experiencing any issues related to the Control-M API Installation.
-* Consult the Integration Agent documentation if experiencing any issues related to configuring the Integration Agent
+* Consult the [Control-M EM API Documentation](/components/CTM_API_9.0.00.200_480104.pdf) if experiencing any issues related to the Control-M API Installation.
+* Consult the [Integration Agent Documentation](https://support.xmatters.com/hc/en-us/articles/201463419-Integration-Agent-for-xMatters-5-x-xMatters-On-Demand) if experiencing any issues related to configuring the Integration Agent
 * Consult [xMatters Help](https://help.xmatters.com/) if experiencing any issues within xMatters OnDemand.
