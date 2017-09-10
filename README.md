@@ -4,7 +4,7 @@
 
 BMC Control-M delivers is business automation solution that simplifies and automates diverse batch application workloads. When events meet predetermined criteria, this integration with xMatters relays critical BMC Control-M insight data to the correct people and systems to help coordinate and resolve incidents faster. xMatters leverages your group on-call schedules and rotations, escalation rules, and user device preferences to quickly engage the right resources with customizable response and collaboration options.
 
-## Automate Handoffs accross your toolcahin
+## Automate Handoffs accross your toolchain
 
 Integrating xMatters with your other tools allows you to automatically transfer key BMC Control-M alert data throughout your systems and drive workflows forward. Notifications and collaboration invites embedded with BMC Control-M insights allow your resolution teams to take immediate action.
   * Create a service management ticket with the BMC Control-M insights
@@ -263,18 +263,19 @@ To create an integration user:
 ### 5.4 Permissions
    
 #### 5.4.1 Sender Permissions
-In the Edit drop-down list for the plan, select Forms.
-For the Incident Alerts form, click the Not Deployed drop-down list, and then select Create Event Web Service (in some deployments, Enable for Web Service).
+In the Edit drop-down list for the BMC Control-M Integation communication plan, select Forms.
+For the Abend form, click the Not Deployed drop-down list, and then select Create Event Web Service (in some deployments, Enable for Web Service).
 In the Web Service Only drop-down list, click Permissions.
 Add the REST API user you created above, and then click Save Changes.
-Repeat steps 6-8 for the Engage with xMatters and Conference Bridge forms.
+Repeat steps 6-8 for the remaining forms (Run Too Long, Complate Too Fast, Command Result).
 #### 5.4.2 Access Permissions
 1. Login to xMatters OnDemand
 2. Navigate to the Developer tab
-3. Find the newly imported Control-M communication plan.
-4. From the Edit dropdown select Access Permisssions
+3. Find the newly imported BMC Control-M Integration ommunication plan.
+4. From the Edit dropdown select Access Permissions
 5. Add the following role:
    * Rest Web Services User
+   * Developer
 
 #### 5.4.3 Edit Endpoints
 To configure the endpoints:
