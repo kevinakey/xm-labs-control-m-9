@@ -280,7 +280,7 @@ Repeat steps 6-8 for the Engage with xMatters and Conference Bridge forms.
 To configure the endpoints:
 
 1. On the communication plan, click the Integration Builder tab, and then click the Edit Endpoints button to display the endpoints for the integrations.
-2. Click the xMatters endpoint, update it with the credentials for the integration user you created in step 5.3 and then click Save Changes.
+2. Click the xMatters endpoint, assign the endpoint to the integration user you created in step 5.3 and then click Save Changes.
   
 ## 6. Configuration Validation
 
