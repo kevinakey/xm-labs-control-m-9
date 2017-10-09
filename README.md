@@ -45,7 +45,7 @@ The filtering mechanism used to suppress duplicate messages. By default, the fil
 
 * **controlm-config.js:** The main configuration file for the integration; includes API connection information and user information.
 
-* **bmccontrolm.pwd:** Stores the password for the Control-M API user used by the integration service. If you change the name of this file, you must also update the controlm-config.js files to point to the correct password file.
+* **conf/bmccontrolm.pwd:** Stores the password for the Control-M API user used by the integration service. If you change the name of this file, you must also update the controlm-config.js files to point to the correct password file.
 
 
 Once you have installed the files and folders, you will need to modify the controlm-config.js and IAConfig.xml files to suit your deployment configuration.
@@ -54,7 +54,7 @@ _**Note:** If you have more than one integration agent providing the BMC Control
 
 **To install the integration service:**
 
-1. Copy all of the contents of the /components/integration-agent/ folder from the extracted integration archive to the <IAHOME>/controlm25 folder.
+1. Copy all of the contents of the /components/integration-agent/ folder from the extracted integration archive to the <IAHOME> folder.
 
 2. Open the IAConfig.xml file found in <IAHOME>/conf and add the following line to the “service-configs” section: <path>controlm25/controlm.xml</path>
 
